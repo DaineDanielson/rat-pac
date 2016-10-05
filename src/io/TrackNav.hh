@@ -16,7 +16,8 @@ public:
       { Load(mc, verbose); };
   void Load(RAT::DS::MC *mc, bool verbose=false);
   void Clear();
-
+  ~TrackNav() { Clear(); };
+  
   TrackNode *Head() { return fHead; };
   TrackCursor Cursor(bool verbose=false) { return TrackCursor(fHead, verbose); };
 
