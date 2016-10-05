@@ -14,6 +14,7 @@ public:
       { Load(ds->GetMC(), verbose); };
   TrackNav(RAT::DS::MC *mc, bool verbose=false)
       { Load(mc, verbose); };
+  ~TrackNav() { Clear(); }
   void Load(RAT::DS::MC *mc, bool verbose=false);
   void Clear();
 
